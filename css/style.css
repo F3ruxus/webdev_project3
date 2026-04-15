@@ -1,0 +1,112 @@
+/* Shared styling  */
+html, body {
+  height: 100%;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  color: #222;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+img, video{
+  max-width: 100%;
+  height: auto;
+}
+main, section {
+  padding: 2rem;
+}
+.intro-section {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08); 
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+#index {
+  background-color: #72c7f5;
+}
+#index h1 {
+  font-size: 2.25rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+#skills{
+  color: #0b2533;
+}
+#experiences{
+  color: #154863;
+}
+#education{
+  color: #1d6084;
+}
+
+#games {
+  background-color: #F08080;
+}
+#games section img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+}
+#games section h2 {
+  position: relative;
+  font-size: 1.5rem;
+  padding-left: 0.75rem;
+}
+#bfsix{
+  font-family:'Courier New', Courier, monospace;
+  color: #361e1e;
+}
+#kh{
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  color: #4e2b2b;
+}
+#miku{
+  font-family: 'Monaco', monospace, sans-serif;
+  color: #663939;
+}
+#cytus{
+  font-family: 'Lucida Console', Monaco, monospace;
+  color: #774242;
+}
+#cod{
+  color: #834949;
+}
+
+#memes {
+  background-color: #79e27f;
+}
+#memes section video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+}
+#subtitle {
+  font-style: italic;
+  color: #1a3b1a;
+}
+#miningBricks{
+  color: #1f3b21;
+}
+#bfsixExp{
+  color: #2b512d;
+}
+#bugatti{
+  color: #366438;
+}
+#bugattiTwo{
+  color: #407643;
+}
+#pancakes{
+  color: #4d8d50;
+}
