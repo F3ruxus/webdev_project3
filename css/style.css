@@ -110,3 +110,44 @@ main, section {
 #pancakes{
   color: #4d8d50;
 }
+
+@media (min-width: 600px) {
+  #games body {
+    font-size: 16px;
+  }
+  #games nav ul {
+    justify-content: flex;
+    display: flex;
+  }
+  #games section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  #games section img {
+    width: 300px;
+  }
+  #games .intro-section h1{
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  #games body {
+    max-width: 1200px;
+    margin: auto;
+  }
+  #games nav ul {
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+  #games section {
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+  #games section img {
+    width: 400px;
+  }
+  #games h2 {
+    font-size: 2rem;
+  }
+}
