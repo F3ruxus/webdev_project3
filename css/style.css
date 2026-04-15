@@ -116,7 +116,7 @@ main, section {
     font-size: 16px;
   }
   #games nav ul {
-    justify-content: flex;
+    justify-content: space-around;
     display: flex;
   }
   #games section {
