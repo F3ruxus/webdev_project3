@@ -1,28 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
+let slideIndex = 0;
 
-  alert("JS Loaded Successfully");
-
-  let slideIndex = 0;
+function showSlides(n) {
   const slides = document.querySelectorAll(".slide");
+  if (slides.length == 0) return;
 
-  function showSlide(index) {
-    if (slides.length === 0) return;
+  if (n >= slides.length) { slideIndex = 0; }
+  if (n < 0) { slideIndex = slides.length - 1; }
 
-    slides.forEach(slide => slide.style.display = "none");
-    slides[index].style.display = "block";
+  
+  slides.forEach(slide => slide.style.display = "none");
+
+  // Show the current slide
+  slides[slideIndex].style.display = "block";
+}
+
+// Manual navigation
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize slider if slides exist
+  if (document.querySelectorAll(".slide").length > 0) {
+    showSlides(slideIndex);
+    // Auto-advance every 5 seconds
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
   }
-
-  function nextSlide() {
-    if (slides.length === 0) return;
-
-    slideIndex = (slideIndex + 1) % slides.length;
-    showSlide(slideIndex);
-  }
-
-  showSlide(slideIndex);
-  setInterval(nextSlide, 3000);
 });
-
 
 var map, infoWindow, marker;
 function initMap() {

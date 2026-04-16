@@ -91,6 +91,51 @@ main, section {
   font-size: 1.5rem;
   padding-left: 0.75rem;
 }
+.slider-container {
+  position: relative;
+  max-width: 800px; 
+  width: 90%;       
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 0.5rem solid #fff;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+.slide {
+  display: none; 
+  padding: 5%; 
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  height: 50vh; /* Should be scaled to ~50%, if not then edit*/
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 1em; 
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+.next { 
+  right: 0; 
+  border-radius: 0.2rem 0 0 0.2rem; 
+}
+.prev { 
+  left: 0; 
+  border-radius: 0 0.2rem 0.2rem 0; 
+}
+.prev:hover, .next:hover { 
+  background-color: rgba(0,0,0,0.8); 
+}
 #bfsix{
   font-family:'Courier New', Courier, monospace;
   color: #361e1e;
