@@ -37,8 +37,8 @@ main, section {
   height: 25rem;
 }
 .controls {
-  margin-top: 0.625;
-  border: 0.0625 solid transparent;
+  margin-top: 0.625rem;
+  border: 0.0625rem solid transparent;
   border-radius: 0.125rem 0 0 0.125rem;
   box-sizing: border-box;
   height: 2rem;
@@ -184,7 +184,7 @@ main, section {
   color: #4d8d50;
 }
 
-@media (min-width: 37.5) {
+@media (min-width: 37.5em) {
   #games body {
     font-size: 1rem;
   }
@@ -198,7 +198,7 @@ main, section {
     align-items: center;
   }
   #games section img {
-    width: 18.75;
+    width: 18.75rem;
   }
   #games .intro-section h1{
     text-align: center;
