@@ -2,7 +2,7 @@ let slideIndex = 0;
 
 function showSlides(n) {
   const slides = document.querySelectorAll(".slide");
-  if (slides.length == 0) return;
+  if (slides.length === 0) return;
 
   if (n >= slides.length) { slideIndex = 0; }
   if (n < 0) { slideIndex = slides.length - 1; }
