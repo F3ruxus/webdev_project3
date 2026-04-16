@@ -36,7 +36,7 @@
           position: initialCoords,
           map: map,
           title: "Click to see details!",
-          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' // Custom blue icon
+          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
         });
         marker.addListener("click", () => {
           infoWindow.setContent("<strong>Default Location</strong><br>This is the starting point.");
@@ -61,6 +61,37 @@
           infoWindow.setContent(`<strong>${place.name}</strong><br>${place.formatted_address}`);
           infoWindow.open(map, marker);
         });
+        const locationButton = document.getElementById("locate-btn");
+          locationButton.addEventListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                (position) => {
+                  const pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                  };
+                  infoWindow.setPosition(pos);
+                  infoWindow.setContent("You are here.");
+                  infoWindow.open(map);
+                  map.setCenter(pos);
+                  map.setZoom(15);
+                },
+                () => handleLocationError(true, infoWindow, map.getCenter())
+              );
+            } else {
+              handleLocationError(false, infoWindow, map.getCenter());
+            }
+          });
+        }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(
+          browserHasGeolocation
+            ? "Error: The Geolocation service failed."
+            : "Error: Your browser doesn't support geolocation."
+          );
+        infoWindow.open(map);
       }
     </script>
     <script async
